@@ -1,0 +1,52 @@
+MySQL视图
+
+一、什么是视图
+	视图是存放数据的一个接口，也可以说是虚拟表，这些数据可以是从一个或几个基表（视图）的数据，也可是用户自己定义的数据，其实视图里面不存放数据，数据据还是存在基表里面，基表数据发生变化，视图里的数据也随之变量，视图里数据变化，基表也会变化。
+
+二、视图的作用
+	1. 视图可以让查询变得很清楚（复杂的SQL语句变得很简单）
+	
+	2. 保护数据库的重要数据， 给不同的人看不同的数据
+	
+
+三、创建视图
+	create [or replace] [algorithm={merge|temptable|undefined}]
+	view view_name [(column_list)] 
+	as select_statement 
+	[with [cascaded|local] check option]
+	
+
+	alter [or replace] [algorithm={merge|temptable|undefined}]
+	view view_name [(column_list)] 
+	as select_statement 
+	[with [cascaded|local] check option]
+	视图有三种类型
+	Merge: 会将引用视图的语句的文本与视图定义结合起来，使用得视图定义的某一部分取代语句的对应部分
+
+	Temptable
+
+	undefined ：  Megre 
+
+	algorithm=merge
+
+	with local check option     [local]只要满足本视图的条件就可以更新
+	with cascaded check option  [cascaded]则是必须满足所有针对视图的条件，才可以更新
+
+	
+四、视图的操作
+	
+	
+
+五、更改视图
+
+	
+
+六、删除视图
+
+七、查看视图
+
+八、视图在WEB开发中的应用（PHP中使用视图）
+
+	
+
+
